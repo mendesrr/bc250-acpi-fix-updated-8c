@@ -1,4 +1,4 @@
-How to apply:
+# How to apply:
 
 git clone https://github.com/mendesrr/bc250-acpi-fix-updated-8c.git
 
@@ -42,4 +42,4 @@ cpupower frequency-info
 
 
 # Special thanks to:
-# NexGen-3D
+NexGen-3D
