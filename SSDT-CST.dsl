@@ -15,6 +15,10 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "P_CST3", 0x00000001)
     External (\_PR.P009, ProcessorObj)
     External (\_PR.P00A, ProcessorObj)
     External (\_PR.P00B, ProcessorObj)
+    External (\_PR.P00C, ProcessorObj)
+    External (\_PR.P00D, ProcessorObj)
+    External (\_PR.P00E, ProcessorObj)
+    External (\_PR.P00F, ProcessorObj)
 
     // 3-state C-state package mirroring your Zen2 laptop values
     Method (PCST, 0, NotSerialized)
@@ -89,8 +93,12 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "P_CST3", 0x00000001)
     Scope (\_PR.P009) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
     Scope (\_PR.P00A) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
     Scope (\_PR.P00B) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P00C) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P00D) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P00E) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P00F) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
 
-    // Keep the C000..C00B aliases so other AML resolves cleanly
+    // Keep the C000..C00F aliases so other AML resolves cleanly
     Scope (\_PR)
     {
         Alias (\_PR.P000, C000)
@@ -105,6 +113,10 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "P_CST3", 0x00000001)
         Alias (\_PR.P009, C009)
         Alias (\_PR.P00A, C00A)
         Alias (\_PR.P00B, C00B)
+        Alias (\_PR.P00C, C00C)
+        Alias (\_PR.P00D, C00D)
+        Alias (\_PR.P00E, C00E)
+        Alias (\_PR.P00F, C00F)
     }
 }
 

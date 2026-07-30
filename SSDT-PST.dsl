@@ -14,6 +14,10 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "PSTATES", 0x00000001)
     External (\_PR.P009, ProcessorObj)
     External (\_PR.P00A, ProcessorObj)
     External (\_PR.P00B, ProcessorObj)
+    External (\_PR.P00C, ProcessorObj)
+    External (\_PR.P00D, ProcessorObj)
+    External (\_PR.P00E, ProcessorObj)
+    External (\_PR.P00F, ProcessorObj)
 
     // _PCT content (FFixedHW). Use 4-arg Register form to keep iasl happy.
     Name (PPCT, Package ()
@@ -52,6 +56,10 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "PSTATES", 0x00000001)
         Scope (P009) { Method (_PCT,0,NotSerialized){ Return(PPCT) } Method (_PSS,0,NotSerialized){ Return(PPSS) } Method (_PSD,0,NotSerialized){ Return(PPSD) } }
         Scope (P00A) { Method (_PCT,0,NotSerialized){ Return(PPCT) } Method (_PSS,0,NotSerialized){ Return(PPSS) } Method (_PSD,0,NotSerialized){ Return(PPSD) } }
         Scope (P00B) { Method (_PCT,0,NotSerialized){ Return(PPCT) } Method (_PSS,0,NotSerialized){ Return(PPSS) } Method (_PSD,0,NotSerialized){ Return(PPSD) } }
+        Scope (P00C) { Method (_PCT,0,NotSerialized){ Return(PPCT) } Method (_PSS,0,NotSerialized){ Return(PPSS) } Method (_PSD,0,NotSerialized){ Return(PPSD) } }
+        Scope (P00D) { Method (_PCT,0,NotSerialized){ Return(PPCT) } Method (_PSS,0,NotSerialized){ Return(PPSS) } Method (_PSD,0,NotSerialized){ Return(PPSD) } }
+        Scope (P00E) { Method (_PCT,0,NotSerialized){ Return(PPCT) } Method (_PSS,0,NotSerialized){ Return(PPSS) } Method (_PSD,0,NotSerialized){ Return(PPSD) } }
+        Scope (P00F) { Method (_PCT,0,NotSerialized){ Return(PPCT) } Method (_PSS,0,NotSerialized){ Return(PPSS) } Method (_PSD,0,NotSerialized){ Return(PPSD) } }
     }
 }
 
