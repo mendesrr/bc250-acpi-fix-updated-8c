@@ -1,6 +1,6 @@
 # How to apply:
 
-git clone https://github.com/mendesrr/bc250-acpi-fix-updated-8c.git
+"git clone https://github.com/mendesrr/bc250-acpi-fix-updated-8c.git
 
 cd bc250-acpi-fix-updated-8c
 
@@ -12,7 +12,7 @@ cd /tmp/acpi_tables
 
 find kernel | cpio -H newc --create > SSDT_ACPI.cpio
 
-sudo cp SSDT_ACPI.cpio /boot/.
+sudo cp SSDT_ACPI.cpio /boot/."
 
 For Grub:
 
