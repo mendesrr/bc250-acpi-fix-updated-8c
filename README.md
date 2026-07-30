@@ -1,4 +1,4 @@
-# How to apply:
+# How to apply for Bazzite and SteamOS:
 
 ```
 git clone https://github.com/mendesrr/bc250-acpi-fix-updated-8c.git
@@ -32,11 +32,17 @@ sudo update-grub
 
 systemctl reboot
 ```
-## For Limine:
+## How to apply for CachyOS-Limine:
 ```
-sudo sed -i 's|KERNEL_CMDLINE\[default\]+="|KERNEL_CMDLINE[default]+="initrd=/SSDT_ACPI.cpio |' /etc/default/limine
+mkdir -p /etc/initcpio/acpi_override/
 
-sudo limine-mkinitcpio
+cd /etc/initcpio/acpi_override/
+
+wget -nc https://github.com/mendesrr/bc250-acpi-fix-updated-8c/raw/refs/heads/main/SSDT-CST.aml https://github.com/mendesrr/bc250-acpi-fix-updated-8c/raw/refs/heads/main/SSDT-PST.aml
+
+sed -i '/^HOOKS=/ { /acpi_override/q; s/microcode/& acpi_override/; q }' /etc/mkinitcpio.conf
+
+mkinitcpio -P
 
 systemctl reboot
 ```
@@ -63,4 +69,4 @@ cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 ```
 ...................................................................................................................................................................................................
 ## Special thanks to:
-NexGen-3D, shinf1x and J0sh
+NexGen-3D, shinf1x, J0sh and popsicle
