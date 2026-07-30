@@ -49,9 +49,13 @@ cpupower idle-info
 cpupower frequency-info
 ```
 
-Additionally you can set the scaling governor to performance mode:
+Additionally you can set temporarily the scaling governor to performance mode:
 ```
 sudo cpupower frequency-set -g performance
+```
+If you want to set it permanently:
+```
+sudo sed -i 's|#GOVERNOR=\'ondemand\'|GOVERNOR=\'performance\'|' /etc/default/cpupower-service.conf
 ```
 Check current mode with:
 ```
