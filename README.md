@@ -41,5 +41,8 @@ cpupower frequency-info
 
 
 
-# Special thanks to:
+
+
+
+// Special thanks to:
 NexGen-3D
