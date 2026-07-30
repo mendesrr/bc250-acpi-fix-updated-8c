@@ -41,7 +41,7 @@ cpupower idle-info
 cpupower frequency-info
 ```
 
-### Additionally you can set the scaling governor to performance mode:
+Additionally you can set the scaling governor to performance mode:
 ```
 sudo cpupower frequency-set -g performance
 ```
