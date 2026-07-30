@@ -39,7 +39,9 @@ cpupower idle-info
 cpupower frequency-info
 
 
+To set frequency scaling governor to performance:
 
+sudo cpupower frequency-set -g performance
 
 
 ...................................................................................................................................................................................................
