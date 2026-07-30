@@ -34,7 +34,7 @@ systemctl reboot
 ```
 
 
-### To check if it's working:
+### Check if it's working:
 ```
 cpupower idle-info
 
