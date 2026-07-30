@@ -34,6 +34,8 @@ systemctl reboot
 ```
 ## How to apply for CachyOS-Limine:
 ```
+sudo -i
+
 mkdir -p /etc/initcpio/acpi_override/
 
 cd /etc/initcpio/acpi_override/
