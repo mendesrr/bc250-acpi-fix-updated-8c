@@ -32,7 +32,7 @@ systemctl reboot
 
 
 
-To Check if its working:
+To check if it's working:
 
 cpupower idle-info
 
