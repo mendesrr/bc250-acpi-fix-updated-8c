@@ -41,10 +41,11 @@ cpupower frequency-info
 
 // Additionally you can set the governor to performance mode:
 
-// sudo cpupower frequency-set -g performance
+sudo cpupower frequency-set -g performance
+
 // Check with:
 
-// cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 
 ...................................................................................................................................................................................................
 # Special thanks to:
