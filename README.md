@@ -1,3 +1,5 @@
+How to apply:
+
 git clone https://github.com/mendesrr/bc250-acpi-fix-updated-8c.git
 
 cd bc250-acpi-fix-updated-8c
