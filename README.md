@@ -32,7 +32,7 @@ sudo update-grub
 
 systemctl reboot
 ```
-## How to apply for CachyOS-Limine:
+# How to apply for CachyOS-Limine:
 ```
 sudo -i
 
