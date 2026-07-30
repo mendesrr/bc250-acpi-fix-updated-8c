@@ -26,7 +26,7 @@ systemctl reboot
 ```
 ## For Grub-SteamOS:
 ```
-echo 'GRUB_EARLY_INITRD_LINUX_CUSTOM="../../SSDT_ACPI.cpio"' | sudo tee -a /etc/default/grub
+echo 'GRUB_EARLY_INITRD_LINUX_CUSTOM="/SSDT_ACPI.cpio"' | sudo tee -a /etc/default/grub
 
 sudo update-grub
 
