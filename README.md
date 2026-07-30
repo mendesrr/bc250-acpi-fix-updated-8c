@@ -16,11 +16,19 @@ find kernel | cpio -H newc --create > SSDT_ACPI.cpio
 sudo cp SSDT_ACPI.cpio /boot/.
 ```
 
-## For Grub:
+## For Grub-Bazzite:
 ```
 echo 'GRUB_EARLY_INITRD_LINUX_CUSTOM="../../SSDT_ACPI.cpio"' | sudo tee -a /etc/default/grub
 
 ujust regenerate-grub
+
+systemctl reboot
+```
+## For Grub-SteamOS:
+```
+echo 'GRUB_EARLY_INITRD_LINUX_CUSTOM="../../SSDT_ACPI.cpio"' | sudo tee -a /etc/default/grub
+
+sudo update-grub
 
 systemctl reboot
 ```
