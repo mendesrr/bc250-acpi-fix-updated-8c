@@ -61,7 +61,7 @@ Additionally you can temporarily set the scaling governor to performance mode (s
 ```
 sudo cpupower frequency-set -g performance
 ```
-If you want to set it permanently:
+If you want to set it permanently to performance mode:
 ```
 sudo sed -i 's|#GOVERNOR=\'ondemand\'|GOVERNOR=\'performance\'|' /etc/default/cpupower-service.conf
 ```
