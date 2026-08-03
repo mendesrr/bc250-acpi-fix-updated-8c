@@ -29,14 +29,14 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "PSTATES", 0x00000001)
     // _PSS entries: {Freq MHz, Power mW, TransitionLatency us, BusMasterLatency us, Control, Status}
     Name (PPSS, Package ()
     {
-        Package () { 3200, 0, 1000, 1000, 0, 0 },
-        Package () { 2550, 0, 1000, 1000, 1, 1 },
-        Package () { 2325, 0, 1000, 1000, 2, 2 },
-        Package () { 1960, 0, 1000, 1000, 3, 3 },
-        Package () { 1820, 0, 1000, 1000, 4, 4 },
-        Package () { 1600, 0, 1000, 1000, 5, 5 },
-        Package () { 1271, 0, 1000, 1000, 6, 6 },
-        Package () {  800, 0, 1000, 1000, 7, 7 }
+        Package () { 3200, 0, 10, 10, 0, 0 },
+        Package () { 2550, 0, 10, 10, 1, 1 },
+        Package () { 2325, 0, 10, 10, 2, 2 },
+        Package () { 1960, 0, 10, 10, 3, 3 },
+        Package () { 1820, 0, 10, 10, 4, 4 },
+        Package () { 1600, 0, 10, 10, 5, 5 },
+        Package () { 1271, 0, 10, 10, 6, 6 },
+        Package () {  800, 0, 10, 10, 7, 7 }
     })
 
     // Correctly-shaped _PSD: Package-of-one-Package (5 DWORDs)
