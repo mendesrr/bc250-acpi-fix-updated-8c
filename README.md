@@ -67,7 +67,7 @@ sudo systemctl daemon-reload
 
 sudo systemctl enable --now cpupower.service
 
-sudo sed -i "s|#GOVERNOR=\'ondemand\'|GOVERNOR=\'performance\'|" /etc/default/cpupower-service.conf /etc/default/cpupower
+sudo sed -i -E "s|#GOVERNOR=.*|GOVERNOR='performance'|" /etc/default/cpupower-service.conf 2>/dev/null || sudo sed -i -E "s|#?GOVERNOR=.*|GOVERNOR='performance'|" /etc/default/cpupower 2>/dev/null
 ```
 Check current mode with:
 ```
