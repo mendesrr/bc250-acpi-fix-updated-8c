@@ -63,7 +63,11 @@ sudo cpupower frequency-set -g performance
 ```
 If you want to set it permanently to performance mode:
 ```
-sudo sed -i 's|#GOVERNOR=\'ondemand\'|GOVERNOR=\'performance\'|' /etc/default/cpupower-service.conf
+sudo systemctl daemon-reload
+
+sudo systemctl enable --now cpupower.service
+
+sudo sed -i "s|#GOVERNOR=\'ondemand\'|GOVERNOR=\'performance\'|" /etc/default/cpupower-service.conf /etc/default/cpupower
 ```
 Check current mode with:
 ```
