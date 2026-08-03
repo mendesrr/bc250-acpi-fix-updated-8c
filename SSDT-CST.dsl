@@ -80,23 +80,43 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "P_CST3", 0x00000001)
         })
     }
 
+    // Add _CST to each vendor processor
+    Scope (\_PR.P000) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P001) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P002) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P003) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P004) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P005) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P006) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P007) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P008) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P009) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P00A) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P00B) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P00C) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P00D) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P00E) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+    Scope (\_PR.P00F) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+
+    // Keep the C000..C00F aliases so other AML resolves cleanly
     Scope (\_PR)
     {
-       Scope (P000) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
-       Scope (P001) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
-       Scope (P002) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
-       Scope (P003) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
-       Scope (P004) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
-       Scope (P005) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
-       Scope (P006) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
-       Scope (P007) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
-       Scope (P008) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
-       Scope (P009) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
-       Scope (P00A) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
-       Scope (P00B) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
-       Scope (P00C) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
-       Scope (P00D) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
-       Scope (P00E) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
-       Scope (P00F) { Method (_CST, 0, NotSerialized) { Return (PCST()) } }
+        Alias (\_PR.P000, C000)
+        Alias (\_PR.P001, C001)
+        Alias (\_PR.P002, C002)
+        Alias (\_PR.P003, C003)
+        Alias (\_PR.P004, C004)
+        Alias (\_PR.P005, C005)
+        Alias (\_PR.P006, C006)
+        Alias (\_PR.P007, C007)
+        Alias (\_PR.P008, C008)
+        Alias (\_PR.P009, C009)
+        Alias (\_PR.P00A, C00A)
+        Alias (\_PR.P00B, C00B)
+        Alias (\_PR.P00C, C00C)
+        Alias (\_PR.P00D, C00D)
+        Alias (\_PR.P00E, C00E)
+        Alias (\_PR.P00F, C00F)
     }
 }
+
